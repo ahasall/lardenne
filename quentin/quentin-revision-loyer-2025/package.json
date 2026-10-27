@@ -1,0 +1,21 @@
+{
+  "name": "quentin-revision-loyer-2025",
+  "version": "1.0.0",
+  "description": "Lettre de révision annuelle du loyer au titre de 2025 pour Quentin Bertrand et Chloé Piger, logement à Toulouse.",
+  "scripts": {
+    "clean": "rm *.out *.aux *.log",
+    "build": "lualatex letter.tex -output-directory=.tmp",
+    "rename": "mv letter.pdf $npm_package_name.pdf",
+    "postbuild": "npm run clean; npm run rename",
+    "preopen": "npm run build",
+    "open": "open $npm_package_name.pdf"
+  },
+  "keywords": [
+    "latex",
+    "loyer",
+    "irl",
+    "2025",
+    "toulouse"
+  ],
+  "author": "Amadou Sall"
+}

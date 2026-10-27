@@ -1,0 +1,18 @@
+{
+  "name": "quentin-revision-loyer-2026",
+  "version": "1.0.0",
+  "description": "Lettre de révision annuelle du loyer au titre de 2026 pour Quentin Bertrand et Chloé Piger, logement à Toulouse.",
+  "scripts": {
+    "build": "mkdir -p tmp/pdfs output/pdf && lualatex -interaction=nonstopmode -halt-on-error -output-directory=tmp/pdfs -jobname=quentin-revision-loyer-2026 letter.tex && cp tmp/pdfs/quentin-revision-loyer-2026.pdf output/pdf/quentin-revision-loyer-2026.pdf && cp output/pdf/quentin-revision-loyer-2026.pdf quentin-revision-loyer-2026.pdf",
+    "preopen": "npm run build",
+    "open": "open $npm_package_name.pdf"
+  },
+  "keywords": [
+    "latex",
+    "loyer",
+    "irl",
+    "2026",
+    "toulouse"
+  ],
+  "author": "Amadou Sall"
+}
