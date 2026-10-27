@@ -1,0 +1,20 @@
+{
+  "name": "quentin-regularisation-charges-de-2023-11-09-a-2025-06-30",
+  "version": "1.0.0",
+  "description": "Lettre de régularisation des charges locatives des exercices 2023-2024 et 2024-2025 pour Quentin Bertrand et Chloé Piger, logement à Toulouse.",
+  "scripts": {
+    "build": "mkdir -p tmp/pdfs output/pdf && lualatex -interaction=nonstopmode -halt-on-error -output-directory=tmp/pdfs -jobname=quentin-regularisation-charges-de-2023-11-09-a-2025-06-30 letter.tex && cp tmp/pdfs/quentin-regularisation-charges-de-2023-11-09-a-2025-06-30.pdf output/pdf/quentin-regularisation-charges-de-2023-11-09-a-2025-06-30.pdf && cp output/pdf/quentin-regularisation-charges-de-2023-11-09-a-2025-06-30.pdf quentin-regularisation-charges-de-2023-11-09-a-2025-06-30.pdf",
+    "preopen": "npm run build",
+    "open": "open $npm_package_name.pdf"
+  },
+  "keywords": [
+    "latex",
+    "charges",
+    "regularisation",
+    "2023",
+    "2024",
+    "2025",
+    "toulouse"
+  ],
+  "author": "Amadou Sall"
+}
