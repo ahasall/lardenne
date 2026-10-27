@@ -1,0 +1,20 @@
+{
+  "name": "quentin-accord-charges-de-2025-07-01-a-2026-10-27",
+  "version": "1.0.0",
+  "description": "Accord de solde forfaitaire et définitif des charges locatives du 1er juillet 2025 au 27 octobre 2026 et du dépôt de garantie pour Quentin Bertrand et Chloé Piger, logement à Toulouse.",
+  "scripts": {
+    "build": "mkdir -p tmp/pdfs output/pdf && lualatex -interaction=nonstopmode -halt-on-error -output-directory=tmp/pdfs -jobname=quentin-accord-charges-de-2025-07-01-a-2026-10-27 letter.tex && cp tmp/pdfs/quentin-accord-charges-de-2025-07-01-a-2026-10-27.pdf output/pdf/quentin-accord-charges-de-2025-07-01-a-2026-10-27.pdf && cp output/pdf/quentin-accord-charges-de-2025-07-01-a-2026-10-27.pdf quentin-accord-charges-de-2025-07-01-a-2026-10-27.pdf",
+    "preopen": "npm run build",
+    "open": "open $npm_package_name.pdf"
+  },
+  "keywords": [
+    "latex",
+    "charges",
+    "accord",
+    "depot-de-garantie",
+    "2025",
+    "2026",
+    "toulouse"
+  ],
+  "author": "Amadou Sall"
+}
